@@ -1,0 +1,42 @@
+{% extends 'store/base.html' %}
+{% block section %}
+{% load i18n %} 
+<section class="bg-white grid grid-cols-6 gap-4 container mx-auto">
+    {% if product%}
+    <div class="col-span-full lg:col-span-2 p-5">
+        {% if product.gambar %}
+            <img class="hover:grow hover:shadow-lg mx-auto lg:mx-0" src="{{product.gambar.url}}">
+        {% else %}
+            <svg class="hover:grow hover:shadow-lg mx-auto lg:mx-0 text-gray-200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+        {% endif %}
+    </div>
+    <div class="col-span-full lg:col-span-4 p-5 relative">
+        <div class="pt-3 flex flex-col gap-y-2 ">
+            <p id="title" class="text-lg md:text-4xl font-bold">{{product.nama}}</p>
+            <p class="h-fit overflow-y-auto md:max-h-60 text-ellipsis break-all">{{product.deskripsi}}</p>
+            <p id="price" class="text-gray-900 md:pt-0 pt-2 font-semibold price">{{product.harga}}</p>
+            <!-- <input type="number" name="qty" id="qty" min="1" class="border border-slate-600 w-10 rounded px-1" value="1"> -->
+            <div class="flex gap-x-4 justify-end absolute bottom-4 right-0">
+                <button type="button" id="share" class="bg-slate-600 p-3 w-fit rounded-2xl xl:rounded hover:bg-slate-500 text-white flex items-center gap-x-2 drop-shadow-lg"><span class="material-icons-round">share</span>{% translate "Share" %}</button>
+                <a href="https://wa.me/{{phone}}?text=Halo, saya ingin membeli {{product.nama}}" target="_blank" rel="noopener noreferrer" class="bg-slate-600 p-3 w-fit rounded-2xl xl:rounded hover:bg-slate-500 text-white md:mx-0 drop-shadow-lg" onclick="contact()">
+                    {% translate "Hubungi Seller" %}
+                </a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-span-full flex justify-center h-60 items-center">
+        <h2 class="">{% translate "Data Tidak di Temukan" %}</h2>
+    </div>
+    <div class="col-span-full flex justify-end mb-2 gap-x-4">
+        <a href="https://wa.me/{{phone}}?text={% if wa_message %}{{wa_message}}{% endif %}" target="_blank" rel="noopener noreferrer" class="bg-slate-600 p-3 w-fit rounded-2xl xl:rounded hover:bg-slate-500 text-white md:mx-0 drop-shadow-lg">
+            {% translate "Hubungi Seller" %}
+        </a>
+        <a href="{% url 'store' %}" class="bg-slate-600 p-3 w-fit rounded-2xl xl:rounded hover:bg-slate-500 text-white md:mx-0 drop-shadow-lg flex gap-x-2">
+            <span class="material-icons-round">arrow_back</span>
+            {% translate "Kembali" %}
+        </a>
+    </div>
+    {% endif %}
+</section>
+{% endblock section %}

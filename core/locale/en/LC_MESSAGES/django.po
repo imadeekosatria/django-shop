@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-05 14:40+0800\n"
+"PO-Revision-Date: 2023-04-05 14:24+0800\n"
+"Last-Translator:   <imadeekosatriawiguna@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\core\settings.py:156 .\store\templates\store\base.html:169
+msgid "English"
+msgstr "English"
+
+#: .\core\settings.py:157
+msgid "Indonesian"
+msgstr "Indonesian"
+
+#: .\core\settings.py:158
+msgid "German"
+msgstr "German"
+
+#: .\core\settings.py:159
+msgid "Russian"
+msgstr "Russian "
+
+#: .\store\templates\store\base.html:119
+msgid "Shop"
+msgstr "Shop"
+
+#: .\store\templates\store\base.html:121 .\store\templates\store\base.html:194
+msgid "About"
+msgstr "About"
+
+#: .\store\templates\store\base.html:165
+msgid "Indonesia"
+msgstr "Indonesian"
+
+#: .\store\templates\store\base.html:202
+msgid "Social"
+msgstr "Social"
+
+#: .\store\templates\store\detail.html:20
+msgid "Share"
+msgstr "Share"
+
+#: .\store\templates\store\detail.html:22
+#: .\store\templates\store\detail.html:33
+msgid "Hubungi Seller"
+msgstr "Call Seller"
+
+#: .\store\templates\store\detail.html:29
+msgid "Data Tidak di Temukan"
+msgstr "Data not found"
+
+#: .\store\templates\store\detail.html:37
+msgid "Kembali"
+msgstr "Return"
+
+#: .\store\templates\store\store.html:14 .\store\templates\store\store.html:31
+#: .\store\templates\store\store.html:47
+msgid "view product"
+msgstr "View product"
+
+#: .\store\templates\store\store.html:80 .\store\views.py:28
+msgid "Store"
+msgstr "Store"
+
+#: .\store\templates\store\store.html:120
+msgid "Tidak ada Produk"
+msgstr "There's nothing product "
+
+#: .\store\templates\store\store.html:127
+msgid "Muat Lebih"
+msgstr "Load More"
+
+#, fuzzy, python-format
+#~| msgid ""
+#~| "\n"
+#~| "Tentang Toko                                %(about)s\n"
+#~| "                            "
+#~ msgid ""
+#~ "\n"
+#~ "                                %(about)s\n"
+#~ "                            "
+#~ msgstr ""
+#~ "\n"
+#~ "This is an example of text about a shop 2"
